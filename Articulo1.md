@@ -1,4 +1,3 @@
----
 
 # Artículo 1. Principios Fundamentales de la Constitución Digital Universal
 
