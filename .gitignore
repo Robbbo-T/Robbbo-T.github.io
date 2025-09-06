@@ -35,5 +35,8 @@ Thumbs.db
 *.temp
 /tmp/
 
+# MkDocs build artifacts
+site/
+
 # Portfolio reports are committed to track progress
 # But can be regenerated, so they're tracked by default

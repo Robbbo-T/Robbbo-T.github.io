@@ -1,0 +1,21 @@
+{
+  "icn": "ICN-AQUA-56-0001-001-A",
+  "title": "Diagrama Sistema Propulsión Principal",
+  "description": "Vista general del sistema de propulsión con componentes principales: motor eléctrico, celdas de combustible, tanques de hidrógeno",
+  "format": "SVG",
+  "dimensions": "1920x1080", 
+  "file_size": "125.7 KB",
+  "security": "01",
+  "created": "2025-01-16T10:00:00Z",
+  "modified": "2025-01-16T15:30:00Z",
+  "author": "Design Team",
+  "author_id": "design@aquatech.com",
+  "checksum": "sha256:d34db33f7a8c9b2e1f5d6a4c3b9e8f2a1d7c6b5a4e9f8c7d2b6a5e8f1c4d7b9",
+  "linked_dmc": [
+    "DMC-AQUA-A-56-10-20-00-000A-040A-A"
+  ],
+  "keywords": ["propulsión", "hidrógeno", "motor", "celdas", "combustible", "eléctrico"],
+  "revision": "Rev-A",
+  "approved_by": "Chief Engineer",
+  "approval_date": "2025-01-16"
+}
