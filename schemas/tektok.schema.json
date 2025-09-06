@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TEKTOK Schema v1.0",
+  "type": "object",
+  "required": ["tektok"],
+  "properties": {
+    "tektok": {
+      "type": "object",
+      "required": ["id", "title", "owner_org", "domain", "summary", "net_value", "date_issued"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^TEKTOK-[A-Z]{3}-[a-z0-9-]+-[0-9]{4}$"
+        },
+        "title": {"type": "string", "maxLength": 100},
+        "owner_org": {"type": "string"},
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {"type": "string"},
+              "id": {"type": "string"}
+            }
+          }
+        },
+        "domain": {
+          "type": "string",
+          "pattern": "^(ATA-[0-9]{2}|[A-Z]{3})$"
+        },
+        "summary": {"type": "string", "maxLength": 500},
+        "links": {
+          "type": "object",
+          "properties": {
+            "ce_id": {"type": "string"},
+            "dm_refs": {"type": "array", "items": {"type": "string"}},
+            "repo_path": {"type": "string"}
+          }
+        },
+        "effectivity": {
+          "type": "object",
+          "properties": {
+            "aircraft_sn": {"type": "string"},
+            "config": {"type": "string"},
+            "mod_state": {"type": "string"}
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "det_uris": {"type": "array", "items": {"type": "string"}},
+            "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            "cdtl_anchor": {
+              "type": "object",
+              "properties": {
+                "network": {"type": "string"},
+                "tx_id": {"type": "string"},
+                "block_hash": {"type": "string"},
+                "height": {"type": "integer"}
+              }
+            }
+          }
+        },
+        "net_value": {
+          "type": "object",
+          "required": ["score"],
+          "properties": {
+            "inputs": {
+              "type": "object",
+              "properties": {
+                "trl": {"type": "integer", "minimum": 1, "maximum": 9},
+                "quality": {"type": "number", "minimum": 0, "maximum": 1},
+                "energy_saving_pct": {"type": "number", "minimum": 0},
+                "co2e_avoided_kg_per_unit": {"type": "number", "minimum": 0},
+                "market_readiness": {"type": "number", "minimum": 0, "maximum": 1},
+                "risk_discount": {"type": "number", "minimum": 0, "maximum": 0.5}
+              }
+            },
+            "weights": {"type": "object"},
+            "score": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        },
+        "circularity": {
+          "type": "object",
+          "properties": {
+            "repairability": {"type": "number", "minimum": 0, "maximum": 1},
+            "recycled_content_pct": {"type": "number", "minimum": 0, "maximum": 100},
+            "reuse_rate_pct": {"type": "number", "minimum": 0, "maximum": 100},
+            "greenscore": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        },
+        "rights": {
+          "type": "object",
+          "properties": {
+            "license": {"type": "string"},
+            "usage": {"type": "string"}
+          }
+        },
+        "rie": {
+          "type": "object",
+          "properties": {
+            "events": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "date_issued": {"type": "string", "format": "date-time"},
+        "signature": {"type": "string"}
+      }
+    }
+  }
+}

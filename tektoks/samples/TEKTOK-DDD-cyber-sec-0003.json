@@ -1,0 +1,27 @@
+{
+  "tektok": {
+    "id": "TEKTOK-DDD-cyber-sec-0003",
+    "title": "Quantum-Safe Flight Control Encryption",
+    "owner_org": "AQUA",
+    "domain": "ATA-46",
+    "summary": "Post-quantum cryptography implementation for flight control systems using Dilithium-3 signatures and Kyber-1024 key encapsulation.",
+    "links": {
+      "ce_id": "CE-CAT-Q100-DDD-ATA-46-PQC",
+      "repo_path": "C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAT-SOURCE/DDD"
+    },
+    "net_value": {
+      "inputs": {
+        "trl": 8,
+        "quality": 0.95,
+        "market_readiness": 0.8
+      },
+      "score": 0.83
+    },
+    "rights": {
+      "license": "Propietaria",
+      "usage": "Mixta"
+    },
+    "date_issued": "2025-01-16T10:00:00Z",
+    "signature": "ed25519:placeholder_signature_pqc"
+  }
+}
