@@ -1,0 +1,39 @@
+# TEKNIA R1 .gitignore
+# Generated CDTL anchor files (temporary)
+tektoks/samples/*_anchored.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Portfolio reports are committed to track progress
+# But can be regenerated, so they're tracked by default

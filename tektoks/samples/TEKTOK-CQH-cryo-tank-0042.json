@@ -1,0 +1,40 @@
+{
+  "tektok": {
+    "id": "TEKTOK-CQH-cryo-tank-0042",
+    "title": "Zero Boil-off H2 Tank Design",
+    "owner_org": "AQUA",
+    "authors": [
+      {"name": "Cryogenics Team", "id": "GitHub:aqua-cryo"}
+    ],
+    "domain": "ATA-28",
+    "summary": "Tanque criogénico con ZBO mediante recirculación activa y aislamiento multicapa, logrando 96h de autonomía sin pérdidas significativas.",
+    "links": {
+      "ce_id": "CE-CAE-Q100-CQH-ATA-28-ZBO-TANK",
+      "repo_path": "C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAE-ENGINEERING/CQH"
+    },
+    "evidence": {
+      "det_uris": ["events/DET-CAE-CQH-28-00-analysis-V2.json"],
+      "sha256": "f3c89df674e1e8c6d8e1f1b4c8b2b1c4e6e1a9b8c1d2e3f4a5b6c7d8e9f0a1b2"
+    },
+    "net_value": {
+      "inputs": {
+        "trl": 6,
+        "quality": 0.9,
+        "energy_saving_pct": 25,
+        "market_readiness": 0.6
+      },
+      "score": 0.68
+    },
+    "circularity": {
+      "repairability": 0.6,
+      "recycled_content_pct": 20,
+      "greenscore": 0.65
+    },
+    "rights": {
+      "license": "CC-BY-4.0",
+      "usage": "Investigación"
+    },
+    "date_issued": "2025-01-16T10:00:00Z",
+    "signature": "ed25519:placeholder_signature_cryo_tank"
+  }
+}

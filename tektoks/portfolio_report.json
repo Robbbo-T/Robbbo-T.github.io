@@ -1,0 +1,36 @@
+{
+  "portfolio": {
+    "name": "AQUA H2-BWB Portfolio",
+    "tektok_count": 3,
+    "domains": [
+      "ATA-53",
+      "ATA-46",
+      "ATA-28"
+    ],
+    "total_net_value": 0.7433333333333333,
+    "tektoks": [
+      {
+        "id": "TEKTOK-CQH-cryo-tank-0042",
+        "title": "Zero Boil-off H2 Tank Design",
+        "domain": "ATA-28",
+        "score": 0.68
+      },
+      {
+        "id": "TEKTOK-AAA-bwb-arch-0001",
+        "title": "BWB Structural Architecture Baseline",
+        "domain": "ATA-53",
+        "score": 0.72
+      },
+      {
+        "id": "TEKTOK-DDD-cyber-sec-0003",
+        "title": "Quantum-Safe Flight Control Encryption",
+        "domain": "ATA-46",
+        "score": 0.83
+      }
+    ],
+    "metrics": {
+      "avg_trl": 7.0,
+      "avg_quality": 0.9
+    }
+  }
+}

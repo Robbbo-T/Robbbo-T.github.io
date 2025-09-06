@@ -1,0 +1,65 @@
+name: TEKNIA CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'tektoks/**'
+      - 'schemas/**'
+      - 'scripts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install jsonschema pyyaml numpy
+    
+    - name: Validate TEKTOKs
+      run: |
+        python scripts/validate_tektoks.py
+    
+    - name: Generate CDTL Anchors
+      run: |
+        python scripts/cdtl_anchor.py
+    
+    - name: Generate Portfolio Report
+      run: |
+        python scripts/aggregation_engine.py
+    
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: teknia-artifacts
+        path: |
+          tektoks/*_anchored.json
+          tektoks/portfolio_report.json
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to CDTL
+      run: |
+        echo "Deploying anchors to CDTL network..."
+        # Add actual CDTL deployment here
+    
+    - name: Update RIE360
+      run: |
+        echo "Syncing with AMPEL360 RIE..."
+        # Add RIE360 integration here
