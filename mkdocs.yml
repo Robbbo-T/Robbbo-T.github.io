@@ -1,0 +1,93 @@
+site_name: Teknia Tokens - S1000D Documentation System
+site_description: S1000D-compliant documentation for Teknia Tokens with UTCS-MI v5.0 traceability
+site_url: https://teknia-tokens.example.com
+repo_url: https://github.com/Robbbo-T/Robbbo-T.space
+repo_name: Robbbo-T/Robbbo-T.space
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+
+nav:
+  - Inicio: index.md
+  - "00 · Introducción":
+    - "00-introduccion/index.md"
+    - "Alcance y objetivos": "00-introduccion/alcance-objetivos.md"
+    - "Conceptos clave": "00-introduccion/conceptos-clave.md"
+  - "10 · Conformidad S1000D":
+    - "10-conformidad/index.md"
+    - "Guía de conformidad": "10-conformidad/guia-conformidad.md"
+    - "Mapeo rápido (S1000D → MkDocs)": "10-conformidad/mapeo-s1000d-mkdocs.md"
+  - "20 · CSDB (Repositorio fuente)":
+    - "20-csdb/index.md"
+    - "Estructura y control": "20-csdb/estructura-control.md"
+    - "Flujo de trabajo": "20-csdb/flujo-trabajo.md"
+  - "30 · Nomenclatura y Códigos":
+    - "30-nomenclatura/index.md"
+    - "UTCS‑MI v5.0": "30-nomenclatura/utcs-mi-v5.md"
+    - "S1000D · Data Module Code (DMC)": "30-nomenclatura/data-module-code.md"
+    - "ICN · Ilustraciones": "30-nomenclatura/icn-ilustraciones.md"
+  - "40 · DMRL (Lista de Requisitos de Módulos de Datos)":
+    - "40-dmrl/index.md"
+    - "DMRL · Descripción": "40-dmrl/dmrl-descripcion.md"
+    - "DMRL · Catálogo (CSV)": "40-dmrl/dmrl-catalogo.md"
+  - "50 · Módulos de Datos":
+    - "50-modulos/index.md"
+    - "Vista general": "50-modulos/vista-general.md"
+    - "DES · Descriptivo (ejemplo)": "50-modulos/des-descriptivo-ejemplo.md"
+    - "PRC · Procedimiento (ejemplo)": "50-modulos/prc-procedimiento-ejemplo.md"
+    - "FSC · Fallos (ejemplo)": "50-modulos/fsc-fallos-ejemplo.md"
+  - "60 · Ilustraciones y Medios":
+    - "60-ilustraciones/index.md"
+    - "ICN y formatos": "60-ilustraciones/icn-formatos.md"
+  - "70 · Publicación (IETP estático)":
+    - "70-publicacion/index.md"
+    - "Ensamblado y build": "70-publicacion/ensamblado-build.md"
+  - "80 · Mantenimiento y Control de Cambios":
+    - "80-mantenimiento/index.md"
+    - "Cambios y versionado": "80-mantenimiento/cambios-versionado.md"
+  - "90 · Anexos":
+    - "90-anexos/index.md"
+    - "Glosario": "90-anexos/glosario.md"
+    - "Esquema JSON (metadatos DM)": "90-anexos/esquema-json-metadatos.md"
+
+extra_css:
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/extra.js
