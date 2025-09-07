@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Sistema de Propulsión Principal - Diagrama Esquemático -->
+  
+  <!-- Título -->
+  <text x="960" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">
+    Sistema de Propulsión - Configuración BWB-H2
+  </text>
+  
+  <!-- Tanques de Hidrógeno -->
+  <g id="hydrogen-tanks">
+    <rect x="100" y="200" width="150" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
+    <text x="175" y="235" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Tanques H₂</text>
+    <text x="175" y="255" text-anchor="middle" font-family="Arial" font-size="12">700 bar</text>
+    <text x="175" y="270" text-anchor="middle" font-family="Arial" font-size="12">200 kg total</text>
+    
+    <!-- Indicadores de tanques -->
+    <circle cx="130" cy="220" r="8" fill="#4caf50"/>
+    <circle cx="150" cy="220" r="8" fill="#4caf50"/>
+    <circle cx="200" cy="220" r="8" fill="#4caf50"/>
+    <circle cx="220" cy="220" r="8" fill="#4caf50"/>
+  </g>
+  
+  <!-- Motor Eléctrico -->
+  <g id="electric-motor">
+    <ellipse cx="600" cy="240" rx="100" ry="60" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+    <text x="600" y="230" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Motor Eléctrico</text>
+    <text x="600" y="250" text-anchor="middle" font-family="Arial" font-size="12">2.5 MW</text>
+    <text x="600" y="265" text-anchor="middle" font-family="Arial" font-size="12">Efic. >95%</text>
+  </g>
+  
+  <!-- Información del Diagrama -->
+  <text x="50" y="1050" font-family="Arial" font-size="12" fill="#666">ICN-AQUA-56-0001-001-A | Sistema de Propulsión BWB-H2 | Rev-A | 2025-01-16</text>
+</svg>
